@@ -27,17 +27,17 @@ Cálculo de pontuação e sistema de ranking persistente em arquivo CSV.
 
 ## Representação do Labirinto (Classe Board)
 
-Decisão: Utilizar uma matriz de caracteres bidimensional (char[][]) para representar o mapa do jogo.
-Justificativa: A matriz é a estrutura mais natural e intuitiva para representar uma grade 2D como um labirinto. Ela oferece acesso direto e extremamente rápido a qualquer célula do mapa através de seus índices (linha e coluna). A verificação de uma posição, como mapa[r][c], é uma operação de tempo constante O(1), o que garante que a movimentação e a renderização do mapa sejam altamente eficientes, independentemente do tamanho do labirinto.
+- Decisão: Utilizar uma matriz de caracteres bidimensional (char[][]) para representar o mapa do jogo.  
+- Justificativa: A matriz é a estrutura mais natural e intuitiva para representar uma grade 2D como um labirinto. Ela oferece acesso direto e extremamente rápido a qualquer célula do mapa através de seus índices (linha e coluna). A verificação de uma posição, como mapa[r][c], é uma operação de tempo constante O(1), o que garante que a movimentação e a renderização do mapa sejam altamente eficientes, independentemente do tamanho do labirinto.
 
 ## Inventário de Chaves (Classe Inventory)
 
-Decisão: Utilizar uma matriz de caracteres bidimensional (char[][]) para representar o mapa do jogo.
-Justificativa: A matriz é a estrutura mais natural e intuitiva para representar uma grade 2D como um labirinto. Ela oferece acesso direto e extremamente rápido a qualquer célula do mapa através de seus índices (linha e coluna). A verificação de uma posição, como mapa[r][c], é uma operação de tempo constante O(1), o que garante que a movimentação e a renderização do mapa sejam altamente eficientes, independentemente do tamanho do labirinto.
+- Decisão: Utilizar uma matriz de caracteres bidimensional (char[][]) para representar o mapa do jogo.
+- Justificativa: A matriz é a estrutura mais natural e intuitiva para representar uma grade 2D como um labirinto. Ela oferece acesso direto e extremamente rápido a qualquer célula do mapa através de seus índices (linha e coluna). A verificação de uma posição, como mapa[r][c], é uma operação de tempo constante O(1), o que garante que a movimentação e a renderização do mapa sejam altamente eficientes, independentemente do tamanho do labirinto.
 
 ## Gerenciamento do Ranking (Classe RankingManager)
-Decisão: Utilizar uma Lista Dinâmica (ArrayList<PlayerScore>) para armazenar as pontuações lidas do arquivo CSV antes de exibi-las.
-Justificativa: Uma lista dinâmica é ideal para esta tarefa, pois o número de registros no ranking não é conhecido previamente. Ela permite adicionar novos scores de forma flexível. O ponto crucial é a necessidade de ordenação. Após carregar todos os dados para a lista, utilizamos o algoritmo de ordenação padrão do Java (List.sort()), que possui uma complexidade de tempo eficiente de O(n log n), onde n é o número de scores.
+- Decisão: Utilizar uma Lista Dinâmica (ArrayList<PlayerScore>) para armazenar as pontuações lidas do arquivo CSV antes de exibi-las.  
+- Justificativa: Uma lista dinâmica é ideal para esta tarefa, pois o número de registros no ranking não é conhecido previamente. Ela permite adicionar novos scores de forma flexível. O ponto crucial é a necessidade de ordenação. Após carregar todos os dados para a lista, utilizamos o algoritmo de ordenação padrão do Java (List.sort()), que possui uma complexidade de tempo eficiente de O(n log n), onde n é o número de scores.
 
 
 ## Pseudocódigos e Análise de Complexidade (Big-O)
