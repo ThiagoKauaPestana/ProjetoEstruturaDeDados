@@ -1,4 +1,5 @@
 package labirinto;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,28 +8,29 @@ public class Main {
 
         System.out.print("Digite seu nome: ");
         String playerName = sc.nextLine().trim();
-        if (playerName.isEmpty()) playerName = "Jogador";
+        if (playerName.isEmpty()) {
+            playerName = "Jogador";
+        }
 
-        System.out.println("Escolha o mapa (1, 2 ou 3): ");
+        System.out.println("Escolha o mapa (Ex: Map1, Map2 ou Map3): ");
         String escolha = sc.nextLine();
-        String mapFile = "src/Map/map" + escolha + ".txt";
-
-        Game game = new Game(mapFile);
-        boolean finished = false;
-
-        while (!finished && !game.isJogoConcluido()) { // Verifica se o jogo acabou
+        String resourcePath = "/Map/" + escolha + ".txt";
+        Game game = new Game(resourcePath);
+        while (true) {
             game.render();
+            if (game.isJogoConcluido()) {
+                break;
+            }
             System.out.print("Movimento (w/a/s/d, q para sair): ");
             String line = sc.nextLine();
-            if (line.isEmpty()) continue;
-
-            char move = line.charAt(0);
-            if (move == 'q') finished = true;
-            else game.movePlayer(move);
-
-            if (game.isJogoConcluido()) {
-                finished = true;
+            if (line.isEmpty()) {
+                continue;
             }
+            char move = line.charAt(0);
+            if (move == 'q') {
+                break;
+            }
+            game.movePlayer(move);
         }
 
         game.bonusFinal();
