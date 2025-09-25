@@ -11,7 +11,7 @@ public class PlayerScore {
         this.timestamp = timestamp;
     }
 
-    // Getters
+ 
     public String getPlayerName() { return playerName; }
     public int getScore() { return score; }
     public String getTimestamp() { return timestamp; }

@@ -88,7 +88,5 @@ public class Player {
         this.r = novaRow;
         this.c = novaCol;
         this.score = 0;
-        // Se quiser limpar o inventário também:
-        // this.inventario = new Inventory(inventario.capacity);
     }
 }

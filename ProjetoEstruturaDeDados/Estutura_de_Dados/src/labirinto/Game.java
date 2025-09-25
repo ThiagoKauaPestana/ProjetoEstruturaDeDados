@@ -15,7 +15,7 @@ public class Game {
     private int totalChaves;
     private boolean jogoConcluido;
 
-    // O construtor agora recebe o "caminho do recurso"
+
     public Game(String resourcePath) {
 
         board = MapLoader.loadFromResource(resourcePath);

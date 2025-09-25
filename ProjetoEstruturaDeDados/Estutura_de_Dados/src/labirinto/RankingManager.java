@@ -9,7 +9,7 @@ public class RankingManager {
     private static final String RANKING_FILE = "ranking.csv";
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 
-    // Salvar score no ranking
+
     public static void saveScore(String playerName, int score) {
         try (FileWriter fw = new FileWriter(RANKING_FILE, true);
              BufferedWriter bw = new BufferedWriter(fw);
